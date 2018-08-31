@@ -1,0 +1,131 @@
+<html><head>
+<title>Schema Report for database: EstacionamientoSobreCalles</title>
+<style>
+        td,th {
+        text-align:left;
+        vertical-align:middle;
+        }
+        table {
+        border-collapse: collapse;
+        border: 1px solid;
+        }
+        caption, th, td {
+        padding: .2em .8em;
+        border: 1px solid #000000;
+        }
+        caption {
+        background: #D3D3D3;
+        font-weight: bold;
+        font-size: 1.1em;
+        }
+        th {
+        font-weight: bold;
+        background: #000000;
+        color: white;
+        }
+        td {
+        background: #FFFFFF;
+        }
+        </style>
+      </head>
+     <body>
+<h1>Schema Report for database: EstacionamientoSobreCalles</h1>
+<a id="home">Table List </a><br /><ul>
+<li><a href="#TAB_COMMENTS">TAB_COMMENTS </a></li>
+<li><a href="#TAB_IMAGES">TAB_IMAGES </a></li>
+<li><a href="#TAB_RANKING">TAB_RANKING </a></li>
+<li><a href="#TAB_SIGNALS">TAB_SIGNALS </a></li>
+<li><a href="#TAB_USUARIO">TAB_USUARIO </a></li>
+</ul>
+<a id="TAB_COMMENTS"></a><table style="width:100%"><caption>Table: TAB_COMMENTS </caption>
+<tr><td>Table Comments</td><td colspan="6">Se almacenaran los comentarios relacionados por los usuarios.</td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>ID_COMMENT</td><td>BIGINT(50)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Campo que contiene el identificador del comentario</td></tr>
+<tr><td>DES_COMMENT</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que contiene la descripcion del comentario</td></tr>
+<tr><td>DATE_COMMENT</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que contiene la fecha del comentario</td></tr>
+<tr><td>ACTIVE</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que contiene si esta activo el comentario</td></tr>
+<tr><td>TAB_USUARIO_ID_USER</td><td>BIGINT(50)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="TAB_IMAGES"></a><table style="width:100%"><caption>Table: TAB_IMAGES </caption>
+<tr><td>Table Comments</td><td colspan="6">Se almacenaran las imagenes subidas por los usuarios.</td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>ID_IMAGE</td><td>BIGINT(50)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Campo que contiene le idenficador de la imagen</td></tr>
+<tr><td>DES_IMAGEN</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que contine la descripcion de la imagen</td></tr>
+<tr><td>DATE_IMAGEN</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que contine la fecha de la imagen</td></tr>
+<tr><td>ACTIVE</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que contiene si esta activa la imagen</td></tr>
+<tr><td>TAB_USUARIO_ID_USER</td><td>BIGINT(50)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td>Campo que contiene la relacion entre el usuario y las imagenes</td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="TAB_RANKING"></a><table style="width:100%"><caption>Table: TAB_RANKING </caption>
+<tr><td>Table Comments</td><td colspan="6">Se almacenaran los usuarios con mejores calificaciones realizadas por los conductores o peatones.</td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>ID_RANKING</td><td>BIGINT(50)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Campo que contien el identificador del ranking</td></tr>
+<tr><td>TOP</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que contine la calificacion del Ranking</td></tr>
+<tr><td>DATE_RANKING</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que contine la fecha del ranking</td></tr>
+<tr><td>TAB_USUARIO_ID_USER</td><td>BIGINT(50)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td>Campo que contiene la relacion entre usuario y ranking</td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="TAB_SIGNALS"></a><table style="width:100%"><caption>Table: TAB_SIGNALS </caption>
+<tr><td>Table Comments</td><td colspan="6">Se almacenaran las señales de transito y sus descripciones</td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>ID_SIGNAL</td><td>BIGINT(50)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Campo que contiene el identificador de la señal</td></tr>
+<tr><td>DES_SIGNAL</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que contiene la descripcion de la señal</td></tr>
+<tr><td>ACTIVE</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que contiene si esta activa la señal</td></tr>
+<tr><td>TAB_IMAGES_ID_IMAGE</td><td>BIGINT(50)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td>campo que contiene la relacion entre la señal y imagen</td></tr>
+<tr><td>TAB_IMAGES_TAB_USUARIO_ID_USER</td><td>BIGINT(50)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td>campo que contiene la relacion entre la tabla imagen y usuario</td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="TAB_USUARIO"></a><table style="width:100%"><caption>Table: TAB_USUARIO </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>ID_USER</td><td>BIGINT(50)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Campo que contien el identificador dle usuario</td></tr>
+<tr><td>NAME</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que contine el nombre dle usuario</td></tr>
+<tr><td>LASTNAME</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que contine el apellido dle usuario</td></tr>
+<tr><td>EMAIL</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que contine el correo electronico del usuario</td></tr>
+<tr><td>PASSWORD</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que contiene la contraseño del usuario</td></tr>
+<tr><td>DATE_USER</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que contoine la fecha de registro del usuario</td></tr>
+<tr><td>ACTIVE</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo que contine si el usuario esta activo</td></tr>
+</table><a href="#home">Table List </a></br>
+</body></html>
